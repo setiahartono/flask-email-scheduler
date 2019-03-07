@@ -1,0 +1,13 @@
+celery
+coverage
+flask==1.0.2
+flask-sqlalchemy==2.3.2
+Flask-WTF==0.14.2
+Flask-Admin==1.5.3
+Flask-Mail==0.9.1
+Flask-Testing
+mock
+pytest
+pytest-cov
+pytest-flask
+redis

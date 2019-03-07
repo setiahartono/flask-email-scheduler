@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Email POST{% endblock %}
+
+{% block content%}
+  <h1>Email Post</h1>
+  
+  <div class="col-md-6">
+    <form action="/save_emails" method="POST">
+      {{form.csrf_token}}
+      <div class="form-group">
+        <label for="event_id">{{form.event_id.label}}</label>
+        {{form.event_id(class="form-control")}}
+      </div>
+      <div class="form-group">
+        <label for="email_subject">{{form.email_subject.label}}</label>
+        {{form.email_subject(class="form-control")}}
+      </div>
+      <div class="form-group">
+        <label for="email_content">{{form.email_content.label}}</label>
+        {{form.email_content(rows='20',cols='50', class="form-control")}}
+      </div>
+      <div class="form-group">
+        <label for="timestamp">{{form.timestamp.label}}</label>
+        {{form.timestamp(class="form-control")}}
+        <small id="timestampHelp" class="form-text text-muted">In a D m Y H:M format with abbreviated month, e.g. 05 Mar 2019 19:55</small>
+      </div>
+      <div class="form-group text-right">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+{% endblock %}

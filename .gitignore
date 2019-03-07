@@ -1,0 +1,6 @@
+htmlcov
+*.pyc
+.coverage
+.DS_STORE
+*.sqlite3
+*.db
